@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love for Soso</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+        }
+        h1 {
+            color: #bf4875;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            background-color: #ff4d79;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .envelope-container {
+            margin-top: 50px;
+        }
+        .envelope {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 20px auto 0;
+            background: #ff4d79;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: -75px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 75px solid #ff4d79;
+        }
+        .letter {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+    </style>
+    <script>
+        function nextPage(current, next) {
+            document.getElementById(current).classList.add('hidden');
+            document.getElementById(next).classList.remove('hidden');
+        }
+        function wrongAnswer() {
+            alert('Wrong my baby every part of you is my favoriteeeeeee!! How could you not know?? ❤️');
+            nextPage('page2', 'page3');
+        }
+        function toggleEnvelope() {
+            let letter = document.getElementById('letter');
+            letter.style.display = (letter.style.display === 'none' || letter.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="page1" class="container">
+        <h1>hey myy babyyy</h1>
+        <p>find my love letter rnnn!!</p>
+        <button onclick="nextPage('page1', 'page2')">Letss gooo</button>
+    </div>
+    <div id="page2" class="container hidden">
+        <h1>Which part of soso is my favorite?</h1>
+        <p>Choose wiselyyyy Soso</p>
+        <!-- Replace images with clickable buttons -->
+        <button onclick="wrongAnswer()">Option 1: ur loving adorable personality</button>
+        <br>
+        <br>
+        <button onclick="wrongAnswer()">Option 2: ur sexy perfect sweet body</button>
+        <br>
+        <br>
+        <button onclick="wrongAnswer()">Option 3: ur jealous side 🤤</button>
+        <br>
+    </div>
+    
+
+    </div>
+    
+    <div id="page3" class="container hidden">
+        <h1>Almost There!</h1>
+        <p>Click the heart to unlock the final message.</p>
+        <button onclick="nextPage('page3', 'finalPage')">❤️</button>
+    </div>
+    
+    <div id="finalPage" class="container hidden">
+        <h1>To My Dearest Soso</h1>
+<br>
+<br>
+        <div class="envelope-container">
+            <div class="envelope" onclick="toggleEnvelope()">
+                <p style="color: white; font-size: 18px; font-weight: bold;">💌 Click to Open/Close</p>
+            </div>
+        </div>
+        <div id="letter" class="letter">
+            <h2>My undying love for You</h2>
+            <p>Happy Valentine’s Day to my only love. I don’t even know where to begin because no words could ever truly capture what you mean to me. But I’ll try, because you deserve to know today and every day just how much I adore you.
+
+                From the moment we met, you have been the light of my life, the warmth in my heart, and the sweetest dream I never want to wake up from. You have this way of making everything feel right, even when the world feels overwhelming. Your voice alone brings me comfort, your words fill my soul, and your love completes me in a way I never thought possible.
+                
+                I never knew I could love someone so deeply without even holding them in my arms, but you’ve shown me that love isn’t measured by distance baby it’s measured by the heart And my heart? It beats only for you my love Every day I wake up thinking of you and every night I fall asleep dreaming of you You are my first thought in the morning and my last thought before I sleep You live in every beat of my heart in every breath I take and in every wish I make
+                
+                Loving you is the most beautiful thing I have ever experienced You just know how to make my world brighter my heart fuller, and my life richer I am so grateful for every moment we share every conversation, every laugh, and every tender word exchanged between us. Your love has become my safe haven, the place where I feel the most at home.
+                
+                I long for the day when I can finally hold you in my arms, when I can look into your eyes and whisper all the words my heart aches to say Until then, please know that no matter where I am, no matter the distance between us, my love for you remains unwavering, unshaken, and eternal.
+                
+                You are my greatest blessing, my sweet little princess, my everything and im so damn lucky to have you I will love you today, tomorrow, and for every day that follows, for as long as my heart beats.
+                
+                Forever and always,
+                Your husband Lino.</p>
+            <p>Happy Valentine's Day my love☹️☹️☹️ </p>
+        </div>
+    </div>
+</body>
+</html>
